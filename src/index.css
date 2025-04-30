@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #00c877;
+  }
+}
+
+body {
+  background-color: #242424;
+  color: #f5f5f5;
+  overflow: hidden;
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    background: #3b3b3b;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 3px;
+  }
+}
+
+.tituloMovie {
+  display: inline-block;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
