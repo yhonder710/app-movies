@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom"
 import { Layout } from "../components/organismos/Layout"
 import { Home } from "../pages/Home"
-import { MovieIndividual } from "../components/organismos/MovieIndividual"
+import { MovieIndividual } from "../pages/MovieIndividual"
 
 export const MyRoutes = () => {
   return (
