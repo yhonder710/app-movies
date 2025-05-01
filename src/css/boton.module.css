@@ -21,4 +21,14 @@
   font-size: 50px;
   border-radius: 5px;
   cursor: pointer;
+  border-width: 2px;
+  border-color: #00ff88;
+  padding: 2px;
+  border-radius: 12px;
+}
+
+/* botones flechas */
+
+.botonFlechas {
+  background: #000;
 }
