@@ -1,0 +1,13 @@
+/* logo principal de naybar*/
+.imgPlay {
+  filter: drop-shadow(0 0 2px rgba(0, 255, 136, 0.4));
+  color: #00FF88;
+}
+
+
+/* icon del barra de busqueda */
+
+.iconSeach {
+  filter: drop-shadow(0 0 1px rgba(0, 255, 136, 0.3));
+  color: #00FF88;
+}

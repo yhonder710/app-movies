@@ -1,17 +1,32 @@
 /* boton del tema */
-.botonTema {
-  animation: giros 2s linear infinite;
+.btnModoOscuro {
+  transform: rotate(-15deg);
+  animation: girosSun 1s ease;
+}
+
+.btnModoClaro {
+  transform: rotate(120deg);
+  animation: girosSun 1s ease;
 }
 
 
-
-@keyframes giros {
+@keyframes girosSun {
   from {
     transform: rotate(0deg);
   }
 
   to {
-    transform: rotate(360deg);
+    transform: rotate(120deg);
+  }
+}
+
+@keyframes girosSun {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-380deg);
   }
 }
 
