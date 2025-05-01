@@ -12,7 +12,7 @@ export function ListMovies({ data }: Props) {
   return (
     data?.slice(0, limit).map(movies => {
       return (
-        <CartasPeliculas key={movies.id} id={movies.id} idioma={movies.premiered?.slice(0, 4)} titulo={movies.name} image={movies.image?.medium} />
+        <CartasPeliculas key={movies.id} id={movies.id} rate={movies.rating.average} titulo={movies.name} image={movies.image?.original} />
       )
     })
   )
