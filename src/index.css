@@ -13,12 +13,12 @@ body {
   overflow: hidden;
 
   ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
     background: #3b3b3b;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #000000;
+    background: #11d178;
     border-radius: 3px;
   }
 }
@@ -32,6 +32,18 @@ body {
   text-align: center;
 }
 
+.tituloMovieSingle {
+  text-shadow: 0 0 4px rgba(0, 255, 136, 0.4);
+}
+
+.imgMovieSingle {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.imgMovieSeason {
+  box-shadow: 0 0 3px rgba(0, 255, 136, 0.3);
+}
+
 .cajaFiltro {
   display: flex;
   justify-content: center;
@@ -42,32 +54,27 @@ body {
   border-color: #00FF88;
   gap: 2px;
   width: 135px;
-  box-shadow: (0 0 2px rgba(0, 255, 136, 0.3));
-}
-
-.cajaMovie {
-  padding-bottom: 15px;
-  gap: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
 }
 
 
-.botonFil {
-  font-size: 20px;
-  color: #00FF88;
-  padding-right: 5px;
-}
-
-.imgMovi {
-  width: 45px;
-  height: 45px;
-  background-color: transparent;
-}
-
-.iconIcon {
+.iconFilter {
   width: 25px;
   height: 25px;
   filter: drop-shadow(0 0 3px rgba(0, 255, 136, 0.3));
+}
+
+.popcop {
+  filter: drop-shadow(0 0 2px rgba(0, 255, 136, 0.3));
+  animation: popcopLogo 1.5s alternate infinite;
+}
+
+@keyframes popcopLogo {
+  from {
+    transform: rotate(-25deg);
+  }
+
+  to {
+    transform: rotate(30deg);
+  }
 }

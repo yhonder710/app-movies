@@ -33,17 +33,26 @@
 /* boton page */
 
 .botonPage {
-  font-size: 50px;
+  font-size: 40px;
   border-radius: 5px;
   cursor: pointer;
-  border-width: 2px;
+  border-width: 1px;
   border-color: #00ff88;
   padding: 2px;
   border-radius: 12px;
+  position: relative;
+  transition: 300ms;
+
+  &:hover {
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.7);
+  }
 }
 
-/* botones flechas */
+.btnPageHome {
+  transition: 300ms;
 
-.botonFlechas {
-  background: #000;
+  &:hover {
+    text-shadow: 0 0 4px rgba(0, 255, 136, 0.4);
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.7);
+  }
 }

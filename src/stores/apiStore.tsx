@@ -5,7 +5,7 @@ import { API } from '../interfaces/movies'
 interface apiStore {
   numberPage: number
   page: number
-  fetchProducts: () => Promise<API[]>
+  fetchMovies: () => Promise<API[]>
   setPage: (newPage: number) => void;
   nextNumber: () => void
   previosNumber: () => void
@@ -20,7 +20,7 @@ export const useApiStore = create<apiStore>()((set, get) => ({
   numberPage: 0,
   page: 0,
   limit: 20,
-  fetchProducts: async () => {
+  fetchMovies: async () => {
     const { page } = get()
     const endpoint = `https://api.tvmaze.com/shows?page=${page}`
     const response = await fetch(endpoint)

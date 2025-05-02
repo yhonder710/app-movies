@@ -9,13 +9,9 @@ import { Cargando } from "../components/moleculas/Cargando"
 
 
 export function Home() {
-  const { fetchProducts, setPage, numberPage, resetLimit } = useApiStore()
+  const { fetchMovies, setPage, numberPage, resetLimit } = useApiStore()
 
-
-
-
-
-  const { data, refetch, isFetching } = useQuery({ queryKey: ["mostrar productos"], queryFn: fetchProducts })
+  const { data, refetch, isFetching } = useQuery({ queryKey: ["mostrar lista de movies"], queryFn: fetchMovies, staleTime: Infinity })
 
   useEffect(() => {
     setPage(numberPage)
