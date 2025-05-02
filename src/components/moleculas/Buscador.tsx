@@ -11,7 +11,7 @@ export function Buscador() {
     <>
       <div className='flex justify-center items-center gap-3 relative'>
         <IoSearch size={22} className={`${style.iconSeach} hidden sm:block absolute left-2.5`} />
-        <input onChange={changeName} type="text" className="border-1 text-center border-[var(--color-primary)] rounded-3xl w-50 sm:w-80 outline-none p-1 placeholder:text-[#00FF88] placeholder:opacity-65 placeholder:text-center focus:placeholder:opacity-0" placeholder="Busca tu pelicula deseada" />
+        <input onChange={changeName} type="text" className="border-1 text-center border-[var(--color-primary)] rounded-3xl w-60 sm:w-80 outline-none p-1 placeholder:text-[#00FF88] placeholder:opacity-65 placeholder:text-center focus:placeholder:opacity-0" placeholder="Busca tu pelicula deseada" />
       </div>
     </>
   )

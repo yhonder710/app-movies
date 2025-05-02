@@ -18,7 +18,7 @@ export function MenuResponsive() {
 
   return (
     <nav className={`${classMenu} w-screen h-[100vh] z-10 bg-[#101010] absolute md:hidden transition-all`}>
-      <section className="mt-2 h-full gap-3 flex justify-center items-center flex-col">
+      <section className=" h-full gap-3 flex mt-30 items-center flex-col">
         <div className="pb-5 gap-[8px] flex justify-center items-center">
           <img className="w-[65px] h-[65px] popcop" src={Imagen} alt="img" />
           <h3 className="text-[1.8rem] font-bold">Movie App</h3>
