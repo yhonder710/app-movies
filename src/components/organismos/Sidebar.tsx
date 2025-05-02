@@ -9,6 +9,9 @@ import Imagen2 from '../../assets/Genre.png'
 
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { FilterGenre } from "../moleculas/FilterGenre";
+import { FilterAge } from "../moleculas/FilterYear";
+
 
 
 
@@ -30,8 +33,7 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="h-[100vh] w-70 bg-[var(--color-secundario)] border-r-2 border-[var(--color-primary)]  flex flex-col gap-30 items-center pt-5 relative">
-
+    <aside className="h-[100vh] w-70 bg-[var(--color-secundario)] border-r-2 border-[var(--color-primary)]  flex-col gap-30 items-center pt-5 relative md:flex hidden">
       <section className="mt-2">
         <div className="pb-5 gap-[8px] flex justify-center items-center">
           <img className="w-[45px] h-[45px] popcop" src={Imagen} alt="img" />
@@ -42,26 +44,8 @@ export function Sidebar() {
             <CiFilter size={25} color="#00FF88" />
             <h2 className="text-[1.3rem] text-[#00FF88]">Filtros</h2>
           </div>
-          <section className="relative flex items-center gap-2.5 justify-center">
-            <img className="iconFilter" src={Imagen2} alt="img" />
-            <select onChange={changeGenre} name="genre" id="genre" className="bg-[#101010] outline-none border-1 rounded-2xl text-center border-[var(--color-primary)] w-23 ">
-              <option value="all">all</option>
-              <option value="Comedy">Comedy</option>
-              <option value="Drama">Drama</option>
-              <option value="Family">Family</option>
-            </select>
-          </section>
-
-          <section className="flex items-center gap-2.5 justify-center">
-            <img className="iconFilter" src={Imagen1} alt="age" />
-            <select onChange={changeYear} name="year" id="year" className="bg-[#101010] outline-none border-1 rounded-2xl text-center border-[var(--color-primary)] w-23">
-              <option value="all">all</option>
-              <option value="2010">2010</option>
-              <option value="2011">2011</option>
-              <option value="2012">2012</option>
-              <option value="2012">2012</option>
-            </select>
-          </section>
+          <FilterGenre Imagen2={Imagen2} changeGenre={changeGenre} />
+          <FilterAge Imagen1={Imagen1} changeYear={changeYear} />
         </article>
       </section>
 

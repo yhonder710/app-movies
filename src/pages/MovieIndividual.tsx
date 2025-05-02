@@ -1,5 +1,5 @@
 import { useMoviesIndividual } from "../hooks/MovieIndividual"
-import { SkeletorImg } from "../components/atomos/SkeletorImg"
+import { SkeletorImg } from "../components/moleculas/SkeletorImg"
 import { DetailMovies } from "../components/moleculas/DetailMovies"
 
 export function MovieIndividual() {

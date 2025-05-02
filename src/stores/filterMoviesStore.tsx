@@ -7,7 +7,7 @@ interface StoreFilterGenre {
 }
 
 export const useFilterGenreStore = create<StoreFilterGenre>((set) => ({
-  filterGenre: 'all',
+  filterGenre: 'All',
   changeGenre: (e) => set({ filterGenre: e.target.value })
 }))
 
@@ -18,7 +18,7 @@ interface StoreFilterYear {
 }
 
 export const useFilterYearStore = create<StoreFilterYear>((set) => ({
-  filterYear: 'all',
+  filterYear: 'All',
   changeYear: (e) => set({ filterYear: e.target.value })
 }))
 

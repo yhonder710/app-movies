@@ -23,6 +23,10 @@ body {
   }
 }
 
+.iconMenu {
+  filter: drop-shadow(0 0 1px rgba(0, 255, 136, 0.8));
+}
+
 .tituloMovie {
   display: inline-block;
   width: 150px;
@@ -42,6 +46,17 @@ body {
 
 .imgMovieSeason {
   box-shadow: 0 0 3px rgba(0, 255, 136, 0.3);
+}
+
+.btnCargarMas {
+  text-shadow: 0 0 3px rgba(0, 255, 136, 0.4);
+  box-shadow: 0 0 3px rgba(0, 255, 136, 0.3);
+  transition: 500ms;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 7px rgba(0, 255, 136, 0.7);
+  }
 }
 
 .cajaFiltro {

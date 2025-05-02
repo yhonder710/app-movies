@@ -12,12 +12,12 @@ export const useFilterMovies = (data: API[] | undefined): PropsFilter => {
 
 
   const filterMovies = (data || []).filter(movie => {
-    const matchesGenre = filterGenre === 'all' ||
+    const matchesGenre = filterGenre === 'All' ||
       movie.genres?.some(genre =>
         genre.toLowerCase() === filterGenre.toLowerCase()
       );
 
-    const matchesYear = filterYear === 'all' ||
+    const matchesYear = filterYear === 'All' ||
       movie.premiered?.slice(0, 4) === filterYear;
 
     const matchesName = movie.name?.toLowerCase().includes(filterName.toLowerCase());
