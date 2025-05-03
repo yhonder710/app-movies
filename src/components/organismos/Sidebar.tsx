@@ -51,9 +51,9 @@ export function Sidebar() {
 
       <section className="border-t-2 border-[#00FF88] w-full absolute bottom-15">
         <div className="flex justify-center items-center gap-5 pt-5">
-          <BtnPage FnPage={previoPage} arrow={<IoIosArrowRoundBack size={40} color="#00ff88" />} />
+          <BtnPage key='button previoPage' FnPage={previoPage} arrow={<IoIosArrowRoundBack size={40} color="#00ff88" />} />
           <BtnInicio FnPage={resetNumber} page={page} />
-          <BtnPage FnPage={nextPage} arrow={<IoIosArrowRoundForward size={40} color="#00ff88" />} />
+          <BtnPage key='button next' FnPage={nextPage} arrow={<IoIosArrowRoundForward size={40} color="#00ff88" />} />
         </div>
       </section>
     </aside>

@@ -11,8 +11,9 @@ export function FilterAge({ Imagen1, changeYear }: Props) {
   }
 
   return (
-    <section className="flex items-center gap-2.5 justify-center">
+    <section className="flex items-center gap-2.5 justify-center w-50">
       <img className="iconFilter" src={Imagen1} alt="age" />
+      <label htmlFor="year" className=''>Year</label>
       <select onChange={changeYear} name="year" id="year" className="bg-[#101010] outline-none border-1 rounded-2xl text-center border-[var(--color-primary)] w-23">
         <option value="All">All</option>
         {Object.values(years).map(years => (

@@ -17,6 +17,6 @@ export function BtnPage({ FnPage, arrow }: PropsBtn) {
 
 export function BtnInicio({ FnPage, page }: BtnInicio) {
   return (
-    <button onClick={FnPage} className={`${style.btnPageHome} flex justify-center items-center cursor-pointer text-2xl text-[#00FF88] border-1 border-[#00FF88] w-10 h-10 rounded-[10px]`}>{page}</button>
+    <button aria-label="Boton de siguiente y de anterior pagina" type="button" onClick={FnPage} className={`${style.btnPageHome} flex justify-center items-center cursor-pointer text-2xl text-[#00FF88] border-1 border-[#00FF88] w-10 h-10 rounded-[10px]`}>{page}</button>
   )
 }
