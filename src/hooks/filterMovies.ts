@@ -20,7 +20,7 @@ export const useFilterMovies = (data: API[] | undefined): PropsFilter => {
     const matchesYear = filterYear === 'All' ||
       movie.premiered?.slice(0, 4) === filterYear;
 
-    const matchesName = movie.name?.toLowerCase().includes(filterName.toLowerCase());
+    const matchesName = movie.name?.toLowerCase().includes(filterName.toLowerCase())
 
     return matchesGenre && matchesYear && matchesName;
   });

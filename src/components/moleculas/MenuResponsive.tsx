@@ -7,10 +7,28 @@ import { useFilterGenreStore, useFilterYearStore } from "../../stores/filterMovi
 import { FilterGenre } from "./FilterGenre";
 import { FilterAge } from "./FilterYear";
 import { BtnTemaResponsive } from "../atomos/BtnTemaResponsive";
+import { BtnInicio, BtnPage } from "../atomos/BtnPage";
+
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { IoIosArrowRoundBack } from "react-icons/io";
+import { useApiStore } from "../../stores/apiStore";
 
 export function MenuResponsive() {
   const changeGenre = useFilterGenreStore((state) => state.changeGenre)
   const changeYear = useFilterYearStore((state) => state.changeYear)
+  const { nextNumber, previosNumber, numberPage, page, resetNumber } = useApiStore()
+
+  const previoPage = () => {
+    if (numberPage > 0) {
+      previosNumber()
+    }
+  }
+
+  const nextPage = () => {
+    if (numberPage < 330) {
+      nextNumber()
+    }
+  }
 
   const { btnMenu } = menuResponsiveStore()
 
@@ -32,6 +50,12 @@ export function MenuResponsive() {
           <FilterAge Imagen1={Imagen1} changeYear={changeYear} />
         </article>
         <BtnTemaResponsive />
+
+        <div className="flex justify-center items-center gap-5 pt-5">
+          <BtnPage FnPage={previoPage} arrow={<IoIosArrowRoundBack size={40} color="#00ff88" />} />
+          <BtnInicio FnPage={resetNumber} page={page} />
+          <BtnPage FnPage={nextPage} arrow={<IoIosArrowRoundForward size={40} color="#00ff88" />} />
+        </div>
       </section>
     </nav>
   )

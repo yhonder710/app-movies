@@ -11,7 +11,7 @@ import { Cargando } from "../components/moleculas/Cargando"
 export function Home() {
   const { fetchMovies, setPage, numberPage, resetLimit } = useApiStore()
 
-  const { data, refetch, isFetching } = useQuery({ queryKey: ["mostrar lista de movies"], queryFn: fetchMovies, staleTime: Infinity })
+  const { data, refetch, isFetching, error } = useQuery({ queryKey: ["mostrar lista de movies"], queryFn: fetchMovies, staleTime: Infinity })
 
   useEffect(() => {
     setPage(numberPage)
@@ -20,6 +20,8 @@ export function Home() {
   }, [numberPage])
 
   const { filterMovies } = useFilterMovies(data)
+
+  if (error) return <div className="text-center w-full pt-20 font-bold text-2xl">{error.message}</div>;
 
   return (
     <>
